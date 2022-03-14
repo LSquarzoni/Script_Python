@@ -40,7 +40,6 @@ import numpy as np
 # import some common detectron2 utilities
 from detectron2.config import get_cfg
 from detectron2.modeling import build_model
-from detectron2 import model_zoo
 
 from detectron2_backbone import backbone
 from detectron2_backbone.config import add_backbone_config
@@ -63,7 +62,7 @@ print(model)
 
 """ from torchinfo import summary
 
-summary(model, (1, 240, 320)) """
+summary(model, (1, 1, 240, 320)) """
 
 
 
@@ -71,7 +70,7 @@ summary(model, (1, 240, 320)) """
 
 from detectron2.utils.analysis import parameter_count, parameter_count_table
 
-tab = parameter_count_table(model, 5)
+tab = parameter_count_table(model, 2)
 print(tab)
 
 
